@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    /* height: 100%; */
+    font-family: 'poppins' sans-serif;
+    display: block;
+}
+
+nav {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 0px 100px;
+    top: 0;
+    z-index: 1;
+}
+.logo {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav-list {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+    list-style: none;
+}
+.nav-list li ::after {
+    background: crimson;
+    content: '';
+    height: 2px;
+    background: crimson;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.nav-list li a:hover:hover {
+    background: crimson;
+    color: #fff;
+}
+.nav-list li a {
+    color: #000;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.menu {
+    display: none;
+}
+@media (max-width: 1200px) {
+    .nav-list {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s ease;
+
+    }
+}
+.nav-list li {
+    display: block;
+    margin: 50px 0;
+}
+.nav-list li a {
+    font-size: 1.5rem;
+}
+.menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+.menu div {
+    width: 25px;
+    height: 3px;
+    background: crimson;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.menu .active div:nth-child(2) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu .active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.nav-list.active {
+    left: 0;
+}
+@media (max-width: 768px) {
+    .nav-list li {
+        margin: 30px 0;
+    }
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
+    .nav-list li {
+        margin: 20px 0;
+    }
+    .nav-list li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-list li {
+        margin: 15px 0;
+    }
+    .nav-list li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-list li {
+        margin: 10px 0;
+    }
+    .nav-list li a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:280px) {
+    .nav-list li {
+    margin: 5px 0;
+    }
+}
+.nav-list li a {
+    font-size: 0.7rem;
+}
